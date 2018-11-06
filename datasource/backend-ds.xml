@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns="http://www.jboss.org/ironjacamar/schema"
+             xsi:schemaLocation="http://www.jboss.org/ironjacamar/schema http://docs.jboss.org/ironjacamar/schema/datasources_1_1.xsd">
+
+    <!-- JNDI at this location. We reference this in META-INF/persistence.xml -->
+    <datasource jndi-name="java:jboss/datasources/backendDS"
+                pool-name="backend-ds-pool" enabled="true" use-java-context="true">
+        <connection-url>jdbc:mysql://localhost:3306/backend</connection-url>
+        <driver>mysql</driver>
+        <security>
+            <user-name>root</user-name>
+            <password>root</password>
+        </security>
+    </datasource>
+</datasources>
